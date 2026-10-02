@@ -3,24 +3,42 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted: #5f6a63;
+  --panel: #ffffff;
+  --primary: #27594b;
+  --primary-strong: #204d40;
+  --accent: #b75c43;
+  --border: rgba(31, 40, 36, 0.12); 
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+  --font-mono: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-fraunces), Georgia, serif;
 }
