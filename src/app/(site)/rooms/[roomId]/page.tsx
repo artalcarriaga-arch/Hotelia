@@ -1,53 +1,4 @@
-const rooms = [
-    {
-    id: "suite-del-jardin",
-    name: "Suite del jardín",
-    price: 200,
-    guests: 2,
-    rating: 4.9,
-    type: "Suite",
-    image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-    description: "Espacio luminosos con terraza privada y desayuno incluido.",
-    available: true,
-    },
-    {
-    id: "habitacion-superior",
-    name: "Habitación superior",
-    price: 180,
-    guests: 2,
-    rating: 4.8,
-    type: "Habitación",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-    description: "Diseño cálido y elegante para estadías largas.",
-    available: true,
-  },
-  {
-    id: "loft-de-skyline",
-    name: "Loft de skyline",
-    price: 260,
-    guests: 3,
-    rating: 5.0,
-    type: "Loft",
-    image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
-    description: "Vista panorámica y ambiente íntimo para escapadas.",
-    available: false,
-  },
-  {
-    id: "junior-deluxe",
-    name: "Junior Deluxe",
-    price: 210,
-    guests: 2,
-    rating: 4.7,
-    type: "Habitación",
-    image:
-      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1200&q=80",
-    description: "Diseño contemporáneo con una zona de estar muy confortable.",
-    available: true,
-  },
-];
+import { mockRooms } from "@/data/rooms";
 
 export default function RoomsPage() {
     return (
@@ -110,7 +61,7 @@ export default function RoomsPage() {
         </section>
 
         <section className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {rooms.map((room) => (
+          {mockRooms.map((room) => (
             <article
               key={room.id}
               className="overflow-hidden rounded-[1.75rem] border border-[#e2ddd3] bg-white shadow-[0_12px_30px_rgba(31,40,36,0.04)]"
