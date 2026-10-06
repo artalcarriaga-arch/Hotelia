@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { mockRooms } from "@/data/rooms";
 
@@ -68,9 +69,11 @@ export default function RoomsPage() {
               className="overflow-hidden rounded-[1.75rem] border border-[#e2ddd3] bg-white shadow-[0_12px_30px_rgba(31,40,36,0.04)]"
             >
               <div className="relative">
-                <img
+                <Image
                   src={room.image}
                   alt={room.name}
+                  width={1200}
+                  height={800}
                   className="h-72 w-full object-cover"
                 />
                 <span

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { mockRooms } from "@/data/rooms";
@@ -26,9 +27,11 @@ export default async function RoomDetailPage({ params }: Props) {
 
         <div className="grid gap-8 rounded-[2rem] border border-[#e2ddd3] bg-white p-6 shadow-[0_12px_30px_rgba(31,40,36,0.04)] md:grid-cols-2">
           <div className="overflow-hidden rounded-[1.5rem]">
-            <img
+            <Image
               src={room.image}
               alt={room.name}
+              width={1200}
+              height={900}
               className="h-full min-h-[420px] w-full object-cover"
             />
           </div>
